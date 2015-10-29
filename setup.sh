@@ -8,6 +8,7 @@ echo "ip=env | grep SSH_CLIENT | grep -o '\([[:digit:]]\+\.\)\{3\}[[:digit:]]\+'
 echo -e 'echo -e `env | grep SSH_CLIENT \c' >> ~/Desktop/sample.txt
 echo -e "| grep -o '\([[:digit:]]\+\.\)\{3\}[[:digit:]]\+'\c" >> ~/Desktop/sample.txt
 echo '`",\c" >> '"$filename" >> ~/Desktop/sample.txt
+# http://www.hostip.info/use.html
 echo 'echo -e `curl "ipinfo.io/$ip/loc"`",\c" >>'" $filename" >> ~/Desktop/sample.txt
 echo 'echo -e `curl "ipinfo.io/$ip/city"`",\c" >>'" $filename" >> ~/Desktop/sample.txt
 echo "date +%Y/%m/%d\ %H:%M:%S >> $filename" >> ~/Desktop/sample.txt
